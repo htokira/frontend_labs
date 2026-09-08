@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв'язок — Шевченківська РДА</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Форма зворотного зв'язку</h1>
+    </header>
+
+    <main>
+        <section>
+            <form action="#" method="post">
+                
+                <fieldset>
+                    <legend>Персональна інформація</legend>
+                    
+                    <label for="fullname">Прізвище та ім'я:</label><br>
+                    <input type="text" id="fullname" name="fullname" required><br><br>
+
+                    <label for="email">E-mail адрес:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="age">Вік:</label><br>
+                    <input type="number" id="age" name="age" min="18" max="120" required><br><br>
+
+                    <label for="education">Освіта:</label><br>
+                    <select id="education" name="education" required>
+                        <option value="">-- Оберіть рівень освіти --</option>
+                        <option value="basic">Повна</option>
+                        <option value="incomplete">Неповна</option>
+                        <option value="higher">Вища</option>
+                        <option value="vocational">Професійна</option>
+                    </select>
+                </fieldset>
+
+                <br>
+
+                <label for="goal">Мета зворотнього зв'язку:</label><br>
+                <select id="goal" name="goal" required>
+                    <option value="">-- Оберіть мету --</option>
+                    <option value="cooperation">Співпраця</option>
+                    <option value="complaint_property">Скарга на порушення права власності</option>
+                    <option value="suggestion">Пропозиція</option>
+                    <option value="error_report">Наявність помилки</option>
+                </select><br><br>
+
+                <label for="details">Детально:</label><br>
+                <textarea 
+                    id="details" 
+                    name="details" 
+                    rows="6" 
+                    cols="50" 
+                    maxlength="500" 
+                    style="resize: none; width: 350px; height: 120px;" 
+                    placeholder="Введіть текст звернення (максимум 500 символів)" 
+                    required></textarea><br><br>
+
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    Я даю згоду на обробку моїх персональних даних
+                </label><br><br>
+
+                <input type="submit" value="Надіслати звернення">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <br>
+        <button onclick="window.location.href='index.html'">Перейти на Головну сторінку</button>
+    </footer>
+    
+</body>
+</html>
