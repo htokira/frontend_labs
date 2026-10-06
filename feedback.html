@@ -5,32 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зворотній зв'язок — Шевченківська РДА</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-    <header>
+<body class="feedback-page">
+    <header class="feedback-header">
         <h1>Форма зворотного зв'язку</h1>
     </header>
 
-    <main>
-        <section>
-            <form action="#" method="post">
+    <main class="feedback-main">
+        <section class="feedback-section">
+            <form action="#" method="post" class="feedback-form">
                 
-                <fieldset>
+                <fieldset class="form-group-fieldset">
                     <legend>Персональна інформація</legend>
                     
-                    <label for="fullname">Прізвище та ім'я:</label><br>
-                    <input type="text" id="fullname" name="fullname" required><br>
+                    <div class="form-field">
+                        <label for="fullname">Прізвище та ім'я:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
 
-                    <label for="email">E-mail адрес:</label><br>
-                    <input type="email" id="email" name="email" required><br>
+                    <div class="form-field">
+                        <label for="email">E-mail адрес:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                    <label for="age">Вік:</label><br>
-                    <input type="number" id="age" name="age" min="18" max="120" required><br>
+                    <div class="form-field">
+                        <label for="age">Вік:</label>
+                        <input type="number" id="age" name="age" min="18" max="120" required>
+                    </div>
 
-                    <label for="education">Освіта:</label><br>
-                    <select id="education" name="education" required>
+                    <div class="form-field">
+                        <label for="education">Освіта:</label>
+                        <select id="education" name="education" required>
                         <option value="">-- Оберіть рівень освіти --</option>
                         <option value="basic">Повна</option>
                         <option value="incomplete">Неповна</option>
@@ -39,37 +46,42 @@
                     </select>
                 </fieldset>
 
-                <br>
+                <div class="form-field full-width">
+                    <label for="goal">Мета зворотнього зв'язку:</label>
+                    <select id="goal" name="goal" required>
+                        <option value="">-- Оберіть мету --</option>
+                        <option value="cooperation">Співпраця</option>
+                        <option value="complaint_property">Скарга на порушення права власності</option>
+                        <option value="suggestion">Пропозиція</option>
+                        <option value="error_report">Наявність помилки</option>
+                    </select>
+                </div>
 
-                <label for="goal">Мета зворотнього зв'язку:</label><br>
-                <select id="goal" name="goal" required>
-                    <option value="">-- Оберіть мету --</option>
-                    <option value="cooperation">Співпраця</option>
-                    <option value="complaint_property">Скарга на порушення права власності</option>
-                    <option value="suggestion">Пропозиція</option>
-                    <option value="error_report">Наявність помилки</option>
-                </select><br>
+                <div class="form-field full-width">
+                    <label for="details">Детально:</label>
+                    <textarea 
+                        id="details" 
+                        name="details" 
+                        maxlength="500" 
+                        placeholder="Введіть текст звернення (максимум 500 символів)" 
+                        required></textarea>
+                </div>
 
-                <label for="details">Детально:</label><br>
-                <textarea 
-                    id="details" 
-                    name="details" 
-                    maxlength="500" 
-                    style="resize: none; width: 350px; height: 120px;" 
-                    placeholder="Введіть текст звернення (максимум 500 символів)" 
-                    required></textarea><br>
+                <div class="form-field checkbox-field">
+                    <label for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        Я даю згоду на обробку моїх персональних даних
+                    </label>
+                </div>
 
-                <label>
-                    <input type="checkbox" name="consent" required>
-                    Я даю згоду на обробку моїх персональних даних
-                </label><br>
-
-                <input type="submit" value="Надіслати звернення">
+                <div class="form-actions">
+                    <input type="submit" value="Надіслати звернення" class="btn-submit">
+                </div>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <button onclick="window.location.href='index.html'">Перейти на Головну сторінку</button>
     </footer>
     

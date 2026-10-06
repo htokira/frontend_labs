@@ -1,0 +1,369 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #2c3e50;
+}
+
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+}
+
+.main-header{
+    position: relative;
+    top: 0;
+    padding-top: 100px;
+    padding-bottom: 45px;
+    background-color: #f8f9fa;
+    border-bottom: 3px solid #2c3e50;
+}
+
+.gov-brand{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 90px;
+    background-color: #2c3e50;
+    padding: 5px 15px;
+    color: white;
+}
+
+.gov-brand img{
+    float: left;
+    margin-right: 15px;
+}
+
+.gov-brand h1{
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.user-actions{
+    float: right;
+    margin-right: 20px;
+}
+
+button{
+    margin-top: 5px;
+    padding: 8px 16px;
+    background-color: #39536c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="button"]{
+    font-size: 0.9rem;
+}
+
+button[class*="cabinet"] {
+    background-color: goldenrod;
+}
+
+button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+nav {
+    float: left;
+    text-align: center;
+    padding-top: 15px;
+}
+
+nav a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+#about {
+    margin: 50px auto;
+    padding: 2%;
+    width: 90%;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+}
+
+#about h2::before{
+    content: "👋 ";
+    font-size: 1.5rem;
+}
+
+.scrollable-content{
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+.leaders-section{
+    margin: 20px auto;
+    width: 90%;
+    border: 1px solid #dee2e6;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.leaders-section:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+aside > h3 {
+    border-bottom: 2px solid #39536c;
+    padding-bottom: 5px;
+}
+
+.sidebar{
+    margin: 20px auto;
+    width: 90%;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+
+.main-footer{
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+@keyframes doubleBorderFocus{
+    0%{
+        border: 4px double transparent;
+    }
+    99%{
+        border: 4px double transparent;
+    }
+    100%{
+        border: 4px double black;
+    }
+}
+
+.contact-info {
+    display: inline-block;
+    padding: 10px;
+    outline: none;
+    border: 4px double transparent;
+}
+
+.contact-info:focus {
+    animation: doubleBorderFocus 3s forwards;
+}
+
+.fixed-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.header-brand{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-brand h1 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.activities-main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.activities-grid{
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.activity-card{
+    background-color: #ffffff;
+    padding: 15px;
+    height: 100%;
+    box-sizing: border-box;
+    border-style: dotted;
+    border-width: 2px;
+    border-color: #800020;
+    border-left-style: solid;
+    border-left-width: 6px;
+}
+
+.gov-relation {
+    font-weight: 300;
+    font-size: 0.85em;
+    font-style: italic;
+    color: #555555;
+}
+
+.activity-card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    filter: brightness(1);
+    transition: filter 0.3s ease;
+}
+
+.activity-card img:hover{
+    filter: brightness(0.75);
+}
+
+.activity-card a:link{
+    color: #37aa37;
+    text-decoration: underline;
+}
+
+
+.feedback-page{
+    background-color: #f4f6f8;
+}
+
+.feedback-header{
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-bottom: 30px;
+}
+
+.feedback-main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
+.feedback-section{
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.feedback-form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.form-group-fieldset{
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px 20px;
+}
+
+.form-group-fieldset legend {
+    font-weight: bold;
+    color: #003366;
+    padding: 0 10px;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc(40%);
+    min-width: 250px;
+}
+
+.form-field.full-width {
+    flex-basis: 100%;
+}
+
+.form-field label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="number"],
+.form-field select,
+.form-field textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-field textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.checkbox-field {
+    flex-basis: 100%;
+    align-self: center;
+    order: 5;
+}
+
+.checkbox-field label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.form-actions {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-end;
+    order: 6;
+}
+
+.btn-submit {
+    background-color: #37aa37;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, font-weight 0.3s ease;
+}
+
+[class*="btn"]:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
