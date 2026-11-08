@@ -59,12 +59,19 @@
 
                 <div class="form-field full-width">
                     <label for="details">Детально:</label>
-                    <textarea 
+
+                    <div class="details-wrapper">
+                        <textarea 
                         id="details" 
                         name="details" 
                         maxlength="500" 
                         placeholder="Введіть текст звернення (максимум 500 символів)" 
                         required></textarea>
+
+                        <span class="details-tooltip" role="status">
+                            Вдячні за Ваш час! Конкретизуйте мету звернення, будь ласка.
+                        </span>
+                    </div>
                 </div>
 
                 <div class="form-field checkbox-field">
@@ -84,6 +91,6 @@
     <footer class="main-footer">
         <button onclick="window.location.href='index.html'">Перейти на Головну сторінку</button>
     </footer>
-    
+    <script src="index.js"></script>
 </body>
 </html>

@@ -17,19 +17,34 @@
     </header>
 
     <main class="activities-main">
-        <section>
+        <div class="activity-search">
+            <label for="activitySearch">Пошук напряму діяльності:</label>
+            <input type="search" id="activitySearch" placeholder="Введіть назву напряму...">
+            <button type="button">Шукати</button>
+            <p id="searchMessage"></p>
+        </div>
+
+        <section class="carousel-section">
+            <button class="carousel-btn prev-btn" id="prev-btn">&#10094;</button>
+
+            <img id="carousel-img" src="img1.jpg" alt="Ремонт та благоустрій району">
+            
+            <button class="carousel-btn next-btn" id="next-btn">&#10095;</button>
+        </section>
+
+        <section id="activities-section">
             <h2>Ключові сфери роботи</h2>
             <ul class="activities-grid">
                 <li>
-                    <article class="activity-card">
+                    <article class="activity-card" id = "zhkg">
                         <h3>Житлово-комунальне господарство та благоустрій</h3>
-                        <img src="zhkg_3_2.jpg" alt="Ремонт та благоустрій району" width="300">
+                        <img src="img1.jpg" alt="Ремонт та благоустрій району" width="300">
                         <p>Обслуговування прибудинкових територій, капітальний ремонт доріг та озеленення скверів.</p>
                         <p><span class="gov-relation">зв’язок з державними органами влади</span>: <a href="https://kyivcity.gov.ua" target="_blank">Департамент житлово-комунальної інфраструктури КМДА</a>.</p>
                     </article>
                 </li>
                 <li>
-                    <article class="activity-card">
+                    <article class="activity-card" id = "social">
                         <h3>Соціальний захист населення</h3>
                         <img src="img2.jpg" alt="Соціальна допомога" width="300">
                         <p>Надання субсидій, допомога пільговим категоріям громадян та внутрішньо переміщеним особам.</p>
@@ -37,15 +52,15 @@
                     </article>
                 </li>
                 <li>
-                    <article class="activity-card">
+                    <article class="activity-card" id = "education">
                         <h3>Освіта та гуманітарна політика</h3>
-                        <img src="education.jpg" alt="Школи та дитячі садки" width="300">
+                        <img src="img3.jpg" alt="Школи та дитячі садки" width="300">
                         <p>Координація роботи закладів дошкільної та загальної середньої освіти району.</p>
                         <p><span class="gov-relation">зв’язок з державними органами влади</span>: <a href="https://www.moe.gov.ua" target="_blank">Міністерство освіти і науки України</a>.</p>
                     </article>
                 </li>
                 <li>
-                    <article class="activity-card">
+                    <article class="activity-card" id = "health">
                         <h3>Охорона здоров'я</h3>
                         <img src="img4.jpg" alt="Охорона здоров'я" width="300">
                         <p>Підтримка роботи районних консультативно-діагностичних центрів та амбулаторій.</p>
@@ -53,7 +68,7 @@
                     </article>
                 </li>
                 <li>
-                    <article class="activity-card">
+                    <article class="activity-card" id = "administration">
                         <h3>ЦНАП та надання адміністративних послуг</h3>
                         <img src="img5.png" alt="ЦНАП та адміністративні послуги" width="300">
                         <p>Забезпечення швидкого та якісного оформлення документів для мешканців району.</p>
@@ -66,6 +81,7 @@
 
     <footer class="main-footer">
         <button onclick="window.location.href='index.html'">Перейти на Головну сторінку</button>
+        <script src="index.js"></script>
     </footer>
 
 </body>
