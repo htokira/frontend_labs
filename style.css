@@ -4,6 +4,12 @@ body{
     padding: 0;
     background-color: #f4f4f4;
     color: #2c3e50;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 h1, h2, h3 {
@@ -14,9 +20,15 @@ h1, h2, h3 {
     position: relative;
     top: 0;
     padding-top: 100px;
-    padding-bottom: 15px;
+    padding-bottom: 8px;
     background-color: #f8f9fa;
     border-bottom: 3px solid #2c3e50;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .gov-brand{
@@ -25,25 +37,29 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     z-index: 10;
-    height: 90px;
+    height: 100px;
     background-color: #2c3e50;
     padding: 5px 15px;
     color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .gov-brand img{
-    float: left;
     margin-right: 15px;
 }
 
 .gov-brand h1{
     font-size: 1.2rem;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .user-actions{
-    float: right;
-    margin-right: 5px;
+    order: 2;
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
 }
 
 button{
@@ -52,6 +68,8 @@ button{
     background-color: #39536c;
     color: white;
     border: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -65,25 +83,27 @@ button[class*="cabinet"] {
 }
 
 button:hover {
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-weight: bold;
 }
 
 nav {
+    order: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
-    padding: 15px 10px 0;
-    text-align: center;
+    gap: 15px;
+    padding: 5px 0;
 }
 
 nav a {
-    display: block;
     color: #2c3e50;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 5px 0;
 }
 
 #about {
@@ -106,16 +126,28 @@ nav a {
 
 .leaders-section{
     margin: 20px auto;
-    width: 90%;
+    width: 80%;
     border: 1px solid #dee2e6;
     background-color: #ffffff;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
     transition: transform 0.3s ease;
 }
 
 .leaders-section:hover{
     transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
 
 table {
     width: 100%;
@@ -165,6 +197,30 @@ aside > h3 {
     }
 }
 
+@-webkit-keyframes doubleBorderFocus{
+    0%{
+        border: 4px double transparent;
+    }
+    99%{
+        border: 4px double transparent;
+    }
+    100%{
+        border: 4px double black;
+    }
+}
+
+@-moz-keyframes doubleBorderFocus{
+    0%{
+        border: 4px double transparent;
+    }
+    99%{
+        border: 4px double transparent;
+    }
+    100%{
+        border: 4px double black;
+    }
+}
+
 .contact-info {
     display: inline-block;
     padding: 10px;
@@ -173,6 +229,8 @@ aside > h3 {
 }
 
 .contact-info:focus {
+    -webkit-animation: doubleBorderFocus 3s forwards;
+    -moz-animation: doubleBorderFocus 3s forwards;
     animation: doubleBorderFocus 3s forwards;
 }
 
@@ -189,11 +247,15 @@ aside > h3 {
     background-color: #ffffff;
     min-width: 200px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     list-style: none;
     padding: 10px 0;
     margin: 0;
     z-index: 1000;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
 }
 
 .dropdown-menu.active {
@@ -242,10 +304,14 @@ aside > h3 {
     max-height: 20vh;
     width: auto;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     border-color: #800020;
     border-width: 2px;
     border-style: solid;
     transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
 }
 
 .carousel-section button {
@@ -258,6 +324,8 @@ aside > h3 {
     background-color: #ffffff;
     border: 1px solid #dee2e6;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
 }
 
 .activity-search label {
@@ -272,6 +340,8 @@ aside > h3 {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     font-size: 1rem;
 }
 
@@ -316,8 +386,12 @@ aside > h3 {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     filter: brightness(1);
     transition: filter 0.3s ease;
+    -webkit-transition: filter 0.3s ease;
+    -moz-transition: filter 0.3s ease;
 }
 
 .activity-card img:hover{
@@ -351,8 +425,12 @@ aside > h3 {
 .feedback-section{
     background-color: #ffffff;
     border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     padding: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .feedback-form{
@@ -367,6 +445,8 @@ aside > h3 {
     width: 100%;
     border: 1px solid #cccccc;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -407,6 +487,8 @@ aside > h3 {
     padding: 10px;
     border: 1px solid #cccccc;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
     font-family: inherit;
     font-size: 0.95rem;
     box-sizing: border-box;
@@ -434,6 +516,8 @@ aside > h3 {
     background-color: #2c3e50;
     color: white;
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     font-size: 0.85rem;
     line-height: 1.4;
     z-index: 10;
@@ -466,11 +550,171 @@ aside > h3 {
     padding: 12px 25px;
     border: none;
     border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease, font-weight 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, box-shadow 0.3s ease, font-weight 0.3s ease;
+    -moz-transition: background-color 0.3s ease, box-shadow 0.3s ease, font-weight 0.3s ease;
 }
 
 [class|="btn"]:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+    #about,
+    .leaders-section,
+    .sidebar {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .details-tooltip {
+        position: relative;
+        left: 0;
+        top: 5px;
+        width: 100%;
+    }
+
+    .user-actions {
+        order: 1;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav {
+        order: 2;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-header {
+        padding-top: 130px;
+    }
+
+    .gov-brand {
+        height: auto;
+        padding: 20px;
+    }
+
+    .gov-brand h1,
+    .header-brand h1,
+    .feedback-header h1 {
+        font-size: 1.2rem;
+        margin-top: 5px;
+    }
+    
+    .activities-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .feedback-form {
+        flex-direction: column;
+    }
+
+    .form-field {
+        flex-basis: 100%;
+        min-width: 100%;
+    }
+
+    .feedback-section {
+        padding: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gov-brand h1,
+    .header-brand h1,
+    .feedback-header h1 {
+        font-size: 1.1rem;
+    }
+
+    .form-field {
+        min-width: 100%;
+    }
+    th, td {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+
+    #about,
+    .leaders-section,
+    .sidebar {
+        width: 100%;
+        margin: 15px auto;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .gov-brand {
+        height: auto;
+        min-height: 100px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 8px 10px;
+    }
+
+    .gov-brand img {
+        margin-right: 0;
+        margin-bottom: 5px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .gov-brand h1,
+    .header-brand h1,
+    .feedback-header h1 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .main-header {
+        padding-top: 140px;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .user-actions button {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        width: 100%;
+    }
+
+    nav {
+        gap: 6px;
+        flex-direction: column;
+    }
+
+    nav a, .dropdown-btn {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+
+    .feedback-section,
+    .form-group-fieldset,
+    .activities-main {
+        padding: 12px;
+    }
 }
